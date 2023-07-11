@@ -18,7 +18,7 @@ class Tela:
         btn2.grid(row=3, column=0)
 
         # Caixa de texto com scrollbar (ScrollText)
-        # Obs: state=tk.DISABLED é para deixar em modo leitura e impedir que o CORNO do usuario altere o que ta na SCB
+        # Obs: state=tk.DISABLED é para deixar em modo leitura e impedir que o usuario altere o que ta na SCB
         self.scb_texto = ScrolledText(lfr, width=50, state=tk.DISABLED)
         self.scb_texto.grid(row=1, column=0)
 
@@ -30,7 +30,7 @@ class Tela:
         # Fiz essa lista com todos os caracteres epeciais por ser o unico jeito que consegui fazeer isso funcionar
         especiais = ["F", "KP", "Shift", "Control", "Alt", "Delete", "Insert", "Home", "End", "Page_Up", "Page_Down",
                      "Left", "Right", "Up", "Down", "Num_Lock", "Scroll_Lock", "Print", "Prior", "Clear", "Next", "Tab",
-                     "Caps_Lock", "Win_L", "Space", "Return", "BackSpace", "Escape"]
+                     "Caps_Lock", "Win_L", "space", "Return", "BackSpace", "Escape"]
 
         # Verifica se é uma tecla "normal" (Alfanumerico), ou de pontuação
         if evento.char.isalnum():
@@ -57,7 +57,7 @@ class Tela:
         # Rolar para a automaticamente para a última linha conforme for atualizado a SCB
         self.scb_texto.see(tk.END)
 
-        # OBS: Por algum KRL de razão algumas teclas como ^, ~, ¨ só aparecem após clicar 2x na tecla
+        # OBS: Por alguma razão algumas teclas como ^, ~, ¨ só aparecem após clicar 2x na tecla
 
     # Função para limpar a TextScrollbar
     def limpar_tela(self):
